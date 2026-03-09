@@ -1,0 +1,30 @@
+# -*- Basic dictionary operations -*-
+"""
+Created on Mon Mar  9 05:02:00 2026
+
+@author: RichalGole
+"""
+
+#creating an empty dictionary
+student={}
+
+#Adding key value pairs
+student["name"]="Pranay"
+student["age"]=20
+student["course"]="python"
+
+print("Dictionary after adding elements.")
+print(student)
+
+#updating a value
+student["age"]=21
+
+print("\n Dictionary after updating a value: ")
+print(student)
+
+#Deleting a key value
+del student["course"]
+
+print("\n Dictionary after deleting a key value")
+print(student)
+
