@@ -1,0 +1,26 @@
+import math
+
+class DistanceCalculator:
+    def __init__(self, x1, y1, x2, y2):
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+
+    def calculate_distance(self):
+        return math.sqrt((self.x2 - self.x1)**2 + (self.y2 - self.y1)**2)
+
+    def display_distance(self):
+        distance = self.calculate_distance()
+        print(f"Distance between points: {distance:.2f}")
+
+
+# Example usage
+x1 = float(input("Enter x1: "))
+y1 = float(input("Enter y1: "))
+x2 = float(input("Enter x2: "))
+y2 = float(input("Enter y2: "))
+
+d = DistanceCalculator(x1, y1, x2, y2)
+
+d.display_distance()
