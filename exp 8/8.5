@@ -1,0 +1,14 @@
+import random
+
+def generate_otp():
+    return random.randint(1000, 9999)
+
+otp = generate_otp()
+print("Generated OTP:", otp)
+
+user_otp = int(input("Enter OTP: "))
+
+if user_otp == otp:
+    print("✅ OTP Verified Successfully!")
+else:
+    print("❌ Invalid OTP!")
