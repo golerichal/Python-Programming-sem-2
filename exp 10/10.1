@@ -1,0 +1,32 @@
+import streamlit as st
+
+st.title("🛒 Grocery Bill Calculator")
+
+st.header("Enter Item Details")
+
+# User inputs
+item1 = st.text_input("Item 1 name")
+price1 = st.number_input("Item 1 price", min_value=0.0)
+
+item2 = st.text_input("Item 2 name")
+price2 = st.number_input("Item 2 price", min_value=0.0)
+
+item3 = st.text_input("Item 3 name")
+price3 = st.number_input("Item 3 price", min_value=0.0)
+
+# Calculate button
+if st.button("Calculate Total"):
+    total = price1 + price2 + price3
+
+    st.success("✅ Bill Generated Successfully!")
+
+    st.write("### 🧾 Bill Summary")
+    if item1:
+        st.write(f"{item1}: ₹{price1}")
+    if item2:
+        st.write(f"{item2}: ₹{price2}")
+    if item3:
+        st.write(f"{item3}: ₹{price3}")
+
+    st.write("---")
+    st.write(f"### 💰 Total Amount: ₹{total}")
