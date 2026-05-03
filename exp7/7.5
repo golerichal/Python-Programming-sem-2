@@ -1,0 +1,28 @@
+class Vehicle:
+    def __init__(self, name, fuel_used, distance_travelled):
+        self.name = name
+        self.fuel_used = fuel_used
+        self.distance_travelled = distance_travelled
+
+    def calculate_efficiency(self):
+        if self.fuel_used > 0:
+            return self.distance_travelled / self.fuel_used
+        else:
+            return 0
+
+    def display_details(self):
+        print(f"Vehicle Name: {self.name}")
+        print(f"Distance Travelled: {self.distance_travelled} km")
+        print(f"Fuel Used: {self.fuel_used} liters")
+        print(f"Fuel Efficiency: {self.calculate_efficiency():.2f} km/l")
+
+
+# Example usage
+name = input("Enter vehicle name: ")
+distance = float(input("Enter distance travelled (km): "))
+fuel = float(input("Enter fuel used (liters): "))
+
+v = Vehicle(name, fuel, distance)
+
+print("\nVehicle Details:")
+v.display_details()
